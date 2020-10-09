@@ -1,0 +1,187 @@
+Found array.c
+Compiling
+Found array.o
+Compilation succeeded
+Compiling and linking grade_newPerformance
+Found grade_newPerformance
+Compilation succeeded
+newPerformance passed
+Compiling and linking grade_newArray
+Found grade_newArray
+Compilation succeeded
+newArray passed
+Compiling and linking grade_contract
+Found grade_contract
+Compilation succeeded
+contract passed
+contract (books) passed
+Compiling and linking grade_freeArray
+Found grade_freeArray
+Compilation succeeded
+freeArray + mem check passed
+Compiling and linking grade_readItem
+Found grade_readItem
+Compilation succeeded
+readItem (car list) passed
+readItem (book list) passed
+Compiling and linking grade_writeItem
+Found grade_writeItem
+Compilation succeeded
+writeItem (car list) passed
+writeItem (book list) passed
+Compiling and linking grade_prependItem
+Found grade_prependItem
+Compilation succeeded
+prependItem (car list) passed
+prependItem (book list) passed
+Compiling and linking grade_appendItem
+Found grade_appendItem
+Compilation succeeded
+appendItem (car list) passed
+appendItem (book list) passed
+Compiling and linking grade_insertItem
+Found grade_insertItem
+Compilation succeeded
+insertItem (car list) failed
+  ERROR: malloc(): corrupted top size
+  ERROR: Aborted
+  ''!='vw:golf:7:4\n'
+insertItem (book list) failed
+  ERROR: grade_insertItem: malloc.c:2385: sysmalloc: Assertion `(old_top == initial_top (av) && old_size == 0) || ((unsigned long) (old_size) >= MINSIZE && prev_inuse (old_top) && ((unsigned long) old_end & (pagesize - 1)) == 0)' failed.
+  ERROR: Aborted
+  ''!='City-Of-Bones:Cassandra-Clare:39:27\n'
+Compiling and linking grade_deleteItem
+Found grade_deleteItem
+Compilation succeeded
+deleteItem (car list) failed
+  ERROR: 
+  ERROR: valgrind: m_mallocfree.c:307 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
+  ERROR: valgrind: Heap block lo/hi size mismatch: lo = 4128768, hi = 0.
+  ERROR: This is probably caused by your program erroneously writing past the
+  ERROR: end of a heap block and corrupting heap metadata.  If you fix any
+  ERROR: invalid writes reported by Memcheck, this assertion failure will
+  ERROR: probably go away.  Please try that before reporting this as a bug.
+  ERROR: 
+  ERROR: 
+  ERROR: host stacktrace:
+  ERROR: 
+  ERROR: sched status:
+  ERROR:   running_tid=1
+  ERROR: 
+  ERROR: Thread 1: status = VgTs_Runnable (lwpid 28242)
+  ERROR: client stack range: [0x1FFEFFE000 0x1FFF000FFF] client SP: 0x1FFEFFF550
+  ERROR: valgrind stack range: [0x1002BAA000 0x1002CA9FFF] top usage: 18344 of 1048576
+  ERROR: 
+  ERROR: 
+  ERROR: Note: see also the FAQ in the source distribution.
+  ERROR: It contains workarounds to several common problems.
+  ERROR: In particular, if Valgrind aborted or crashed after
+  ERROR: identifying problems in your program, there's a good chance
+  ERROR: that fixing those problems will prevent Valgrind aborting or
+  ERROR: crashing, especially if it happened in m_mallocfree.c.
+  ERROR: 
+  ERROR: If that doesn't help, please report this bug to: www.valgrind.org
+  ERROR: 
+  ERROR: In the bug report, send all the above text, the valgrind
+  ERROR: version, and what OS and version you are using.  Thanks.
+  ERROR: 
+  ''!='1:1'
+deleteItem (book list) failed
+  ERROR: malloc(): corrupted top size
+  ERROR: Aborted
+  ''!='1:1'
+Compiling and linking grade_findItem
+Found grade_findItem
+Compilation succeeded
+Valgrind found errors:
+  ==28252== Memcheck, a memory error detector
+  ==28252== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+  ==28252== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+  ==28252== Command: ./grade_findItem 1
+  ==28252== 
+  ==28252== Invalid write of size 8
+  ==28252==    at 0x10975B: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x10977B: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x1098B6: writeItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x1093CC: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x1098B6: writeItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x109405: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x1098B6: writeItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10944B: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x109BB8: findItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x109484: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x10980D: readItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x109BE7: findItem (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x109484: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== Invalid read of size 8
+  ==28252==    at 0x109986: freeArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x109678: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==  Address 0x4a1f0a0 is 4 bytes after a block of size 12 alloc'd
+  ==28252==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==28252==    by 0x10971F: newArray (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252==    by 0x10936D: main (in /home/socs/Grading/Repos/A2/lobol/grade_findItem)
+  ==28252== 
+  ==28252== 
+  ==28252== HEAP SUMMARY:
+  ==28252==     in use at exit: 0 bytes in 0 blocks
+  ==28252==   total heap usage: 4 allocs, 4 frees, 4,624 bytes allocated
+  ==28252== 
+  ==28252== All heap blocks were freed -- no leaks are possible
+  ==28252== 
+  ==28252== For counts of detected and suppressed errors, rerun with: -v
+  ==28252== ERROR SUMMARY: 10 errors from 8 contexts (suppressed: 0 from 0)
+findItem (car list) passed
+findItem (book list) passed
+Compiling and linking grade_searchItem
+Found grade_searchItem
+Compilation succeeded
+searchItem (car list) passed
+searchItem (book list) passed
+Found makefile
+Correct options
+Comments
+Indentation levels are: ['', '  ', '   ', '    ', '     ', '      ', '        ']
+Assignment submitted by socs <socs@socsvm> at: Thu Oct 1 17:11:22 2020
